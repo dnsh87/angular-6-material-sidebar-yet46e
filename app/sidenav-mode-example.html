@@ -17,15 +17,50 @@
       </mat-sidenav>
 
       <mat-sidenav-content>
-        <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-        <p>
-          <mat-radio-group class="example-radio-group" [formControl]="mode">
-            <label>Mode:</label>
-            <mat-radio-button value="over">Over</mat-radio-button>
-            <mat-radio-button value="side">Side</mat-radio-button>
-            <mat-radio-button value="push">Push</mat-radio-button>
-          </mat-radio-group>
-        </p>
+        <div fxLayout="column">
+          <div
+            fxLayout="row"
+            fxFlex="30"
+            fxFlexFill
+            style="background-color: #e8fd74"
+            fxLayoutAlign="space-around strech"
+          >
+            <div
+              fxFlex="10"
+              style="background-color: #f1fac0"
+              fxLayoutAlign="center center"
+            >
+              <p class="sidebarbtn">
+                <button mat-button (click)="sidenav.toggle()">Button</button>
+              </p>
+            </div>
+          </div>
+          <div
+            fxLayout="row"
+            fxFlex="70"
+            fxFlexFill
+            style="background-color: #e8fd74"
+            fxLayoutAlign="space-around strech"
+          >
+            <div
+              fxFlex="90"
+              style="background-color: #f1fac0"
+              fxLayoutAlign="center center"
+            >
+              <p>
+                <mat-radio-group
+                  class="example-radio-group"
+                  [formControl]="mode"
+                >
+                  <label>Mode:</label>
+                  <mat-radio-button value="over">Over</mat-radio-button>
+                  <mat-radio-button value="side">Side</mat-radio-button>
+                  <mat-radio-button value="push">Push</mat-radio-button>
+                </mat-radio-group>
+              </p>
+            </div>
+          </div>
+        </div>
       </mat-sidenav-content>
     </mat-sidenav-container>
   </section>

@@ -1,10 +1,11 @@
 import './polyfills';
 
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
-import {HttpClientModule} from '@angular/common/http';
-import {NgModule} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -42,10 +43,10 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
-import {BrowserModule} from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {SidenavModeExample} from './app/sidenav-mode-example';
+import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidenavModeExample } from './app/sidenav-mode-example';
 
 @NgModule({
   exports: [
@@ -86,7 +87,8 @@ import {SidenavModeExample} from './app/sidenav-mode-example';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-  ]
+    FlexLayoutModule,
+  ],
 })
 export class DemoMaterialModule {}
 
@@ -103,12 +105,11 @@ export class DemoMaterialModule {}
   entryComponents: [SidenavModeExample],
   declarations: [SidenavModeExample],
   bootstrap: [SidenavModeExample],
-  providers: []
+  providers: [],
 })
 export class AppModule {}
 
 platformBrowserDynamic().bootstrapModule(AppModule);
-
 
 /**  Copyright 2018 Google Inc. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
